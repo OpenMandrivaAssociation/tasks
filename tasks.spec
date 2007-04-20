@@ -6,10 +6,10 @@ Summary: Simple to-do list for GNOME
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: %{name}-%{version}.tar.bz2
+Source0: http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.bz2
 License: GPL
 Group: Graphical desktop/GNOME
-Url: http://projects.o-hand.com/tasks
+Url: http://pimlico-project.org/tasks.html
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libedataserver-devel
 BuildRequires: libgtk+2-devel
