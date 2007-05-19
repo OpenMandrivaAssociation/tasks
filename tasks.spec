@@ -1,5 +1,5 @@
 %define name tasks
-%define version 0.3
+%define version 0.5
 %define release %mkrel 1
 
 Summary: Simple to-do list for GNOME
@@ -13,6 +13,7 @@ Url: http://pimlico-project.org/tasks.html
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libedataserver-devel
 BuildRequires: libgtk+2-devel
+BuildRequires: libsexy-devel
 BuildRequires: desktop-file-utils
 
 %description
@@ -53,6 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README AUTHORS ChangeLog TODO
 %_bindir/%{name}
 %_datadir/applications/%{name}.desktop
+%_datadir/%name
 %{_iconsdir}/hicolor/*/apps/%name.png
 %{_iconsdir}/hicolor/*/apps/%name.svg
 
