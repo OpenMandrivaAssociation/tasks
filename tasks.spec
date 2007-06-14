@@ -1,5 +1,5 @@
 %define name tasks
-%define version 0.7
+%define version 0.8
 %define release %mkrel 1
 
 Summary: Simple to-do list for GNOME
