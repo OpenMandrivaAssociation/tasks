@@ -1,19 +1,15 @@
-%define name tasks
-%define version 0.11
-%define release %mkrel 1
-
-Summary: Simple to-do list for GNOME
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Source0: http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
-License: GPLv2+
-Group: Graphical desktop/GNOME
-Url: http://pimlico-project.org/tasks.html
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: libedataserver-devel
-BuildRequires: gtk+2-devel
-BuildRequires: libsexy-devel
+Summary:	Simple to-do list for GNOME
+Name:		tasks
+Version:	0.13
+Release:	%mkrel 1
+Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
+License:	GPLv2+
+Group:		Graphical desktop/GNOME
+URL:		http://pimlico-project.org/tasks.html
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	libedataserver-devel
+BuildRequires:	gtk+2-devel
+BuildRequires:	libsexy-devel
 
 %description
 Tasks is a simple to-do list application for GNOME.
@@ -22,13 +18,13 @@ Tasks is a simple to-do list application for GNOME.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
-%find_lang %name
+%find_lang %{name}
 
 %post
 %update_icon_cache hicolor
@@ -38,14 +34,14 @@ rm -rf $RPM_BUILD_ROOT
 %clean_menus
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
-%files -f %name.lang
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc README AUTHORS ChangeLog
 %_bindir/%{name}
 %_datadir/applications/%{name}.desktop
-%_datadir/%name
-%{_iconsdir}/hicolor/*/apps/%name.png
-%{_iconsdir}/hicolor/*/apps/%name.svg
+%_datadir/%{name}
+%{_iconsdir}/hicolor/*/apps/%{name}.png
+%{_iconsdir}/hicolor/*/apps/%{name}.svg
 
