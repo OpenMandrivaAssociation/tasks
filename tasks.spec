@@ -6,6 +6,7 @@ Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 URL:		http://pimlico-project.org/tasks.html
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libedataserver-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	libsexy-devel
