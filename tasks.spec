@@ -10,6 +10,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libedataserver-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	libsexy-devel
+BuildRequires:	intltool
 
 %description
 Tasks is a simple to-do list application for GNOME.
