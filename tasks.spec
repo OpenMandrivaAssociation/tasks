@@ -1,8 +1,8 @@
 Summary:	Simple to-do list for GNOME
 Name:		tasks
-Version:	0.19
+Version:	0.20
 Release:	%mkrel 1
-Source0:	http://pimlico-project.org/sources/tasks/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%name-%version.tar.xz
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
 URL:		http://pimlico-project.org/tasks.html
