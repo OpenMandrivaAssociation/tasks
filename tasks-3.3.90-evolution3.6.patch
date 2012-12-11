@@ -1,0 +1,110 @@
+diff -urN tasks-3.3.90/libkoto/koto-actions.c tasks-3.3.90-patched/libkoto/koto-actions.c
+--- tasks-3.3.90/libkoto/koto-actions.c	2012-02-24 00:36:04.000000000 +1100
++++ tasks-3.3.90-patched/libkoto/koto-actions.c	2012-11-24 02:37:56.962725386 +1100
+@@ -19,7 +19,7 @@
+ #include <config.h>
+ #include <string.h>
+ #include <glib/gi18n.h>
+-#include <libecal/e-cal.h>
++#include <libecal/libecal.h>
+ 
+ #include "koto-task.h"
+ #include "koto-actions.h"
+diff -urN tasks-3.3.90/libkoto/koto-actions.h tasks-3.3.90-patched/libkoto/koto-actions.h
+--- tasks-3.3.90/libkoto/koto-actions.h	2009-04-24 05:00:34.000000000 +1100
++++ tasks-3.3.90-patched/libkoto/koto-actions.h	2012-11-24 02:38:06.282741733 +1100
+@@ -19,7 +19,7 @@
+ #ifndef _KOTO_ACTIONS
+ #define _KOTO_ACTIONS
+ 
+-#include <libecal/e-cal.h>
++#include <libecal/libecal.h>
+ #include "koto-task.h"
+ #include "koto-undo-manager.h"
+ 
+diff -urN tasks-3.3.90/libkoto/koto-group-store.c tasks-3.3.90-patched/libkoto/koto-group-store.c
+--- tasks-3.3.90/libkoto/koto-group-store.c	2009-04-24 18:02:37.000000000 +1100
++++ tasks-3.3.90-patched/libkoto/koto-group-store.c	2012-11-24 02:42:42.114224277 +1100
+@@ -18,8 +18,8 @@
+ 
+ #include <config.h>
+ #include <glib/gi18n.h>
+-#include <libecal/e-cal-view.h>
+-#include <libedataserver/e-data-server-util.h>
++#include <libecal/libecal.h>
++#include <libedataserver/libedataserver.h>
+ 
+ #include "ical-util.h"
+ #include "koto-group-store.h"
+diff -urN tasks-3.3.90/libkoto/koto-group-store.h tasks-3.3.90-patched/libkoto/koto-group-store.h
+--- tasks-3.3.90/libkoto/koto-group-store.h	2009-12-01 20:07:37.000000000 +1000
++++ tasks-3.3.90-patched/libkoto/koto-group-store.h	2012-11-24 02:38:24.334773396 +1100
+@@ -19,7 +19,7 @@
+ #ifndef _KOTO_GROUP_STORE
+ #define _KOTO_GROUP_STORE
+ 
+-#include <libecal/e-cal-view.h>
++#include <libecal/libecal.h>
+ #include <gtk/gtk.h>
+ #include "koto-group.h"
+ 
+diff -urN tasks-3.3.90/libkoto/koto-task-editor-dialog.h tasks-3.3.90-patched/libkoto/koto-task-editor-dialog.h
+--- tasks-3.3.90/libkoto/koto-task-editor-dialog.h	2009-12-01 20:07:37.000000000 +1000
++++ tasks-3.3.90-patched/libkoto/koto-task-editor-dialog.h	2012-11-24 02:38:37.021295648 +1100
+@@ -20,7 +20,7 @@
+ #define _KOTO_TASK_EDITOR_DIALOG
+ 
+ #include <gtk/gtk.h>
+-#include <libecal/e-cal.h>
++#include <libecal/libecal.h>
+ #include "koto-task.h"
+ #include "koto-group-store.h"
+ #include "koto-undo-manager.h"
+diff -urN tasks-3.3.90/libkoto/koto-task-store.c tasks-3.3.90-patched/libkoto/koto-task-store.c
+--- tasks-3.3.90/libkoto/koto-task-store.c	2012-02-24 00:36:04.000000000 +1100
++++ tasks-3.3.90-patched/libkoto/koto-task-store.c	2012-11-24 02:38:49.527817583 +1100
+@@ -18,7 +18,7 @@
+ 
+ #include <config.h>
+ #include <string.h>
+-#include <libecal/e-cal.h>
++#include <libecal/libecal.h>
+ #include "koto-task.h"
+ #include "koto-task-store.h"
+ #include "koto-actions.h"
+diff -urN tasks-3.3.90/libkoto/koto-task-store.h tasks-3.3.90-patched/libkoto/koto-task-store.h
+--- tasks-3.3.90/libkoto/koto-task-store.h	2009-12-01 20:07:37.000000000 +1000
++++ tasks-3.3.90-patched/libkoto/koto-task-store.h	2012-11-24 02:38:59.254834644 +1100
+@@ -20,7 +20,7 @@
+ #define _KOTO_TASK_STORE
+ 
+ #include <gtk/gtk.h>
+-#include <libecal/e-cal-view.h>
++#include <libecal/libecal.h>
+ #include "koto-task.h"
+ #include "koto-undo-manager.h"
+ 
+diff -urN tasks-3.3.90/libkoto/koto-task-view.c tasks-3.3.90-patched/libkoto/koto-task-view.c
+--- tasks-3.3.90/libkoto/koto-task-view.c	2012-02-24 00:36:04.000000000 +1100
++++ tasks-3.3.90-patched/libkoto/koto-task-view.c	2012-11-24 02:42:17.164180515 +1100
+@@ -19,7 +19,7 @@
+ #include <config.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+-#include <libedataserver/e-data-server-util.h>
++#include <libedataserver/libedataserver.h>
+ #include "ical-util.h"
+ #include "koto-cell-renderer-pixbuf.h"
+ #include "koto-platform.h"
+diff -urN tasks-3.3.90/src/gtk/main.c tasks-3.3.90-patched/src/gtk/main.c
+--- tasks-3.3.90/src/gtk/main.c	2012-02-24 00:36:04.000000000 +1100
++++ tasks-3.3.90-patched/src/gtk/main.c	2012-11-24 02:39:16.753865338 +1100
+@@ -18,7 +18,7 @@
+ 
+ #include <config.h>
+ #include <string.h>
+-#include <libecal/e-cal.h>
++#include <libecal/libecal.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+ 
