@@ -4,7 +4,7 @@ Version:	3.3.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/GNOME
-URL:		http://pimlico-project.org/tasks.html
+URL:		https://pimlico-project.org/tasks.html
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 Patch0:		tasks-3.3.90-evolution3.6.patch
 BuildRequires:	pkgconfig(gtk+-3.0)
