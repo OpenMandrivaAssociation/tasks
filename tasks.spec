@@ -7,6 +7,11 @@ Group:		Graphical desktop/GNOME
 URL:		https://pimlico-project.org/tasks.html
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.xz
 Patch0:		tasks-3.3.90-evolution3.6.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(libecal-1.2)
 BuildRequires:	intltool
